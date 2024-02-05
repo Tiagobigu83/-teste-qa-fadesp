@@ -1,0 +1,227 @@
+Parte 1: SQL
+1. Consulta SQL Básica: https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all
+ Escreva uma consulta SQL para recuperar todos os registros de uma tabela.
+
+SELECT * FROM Customers;
+
+2. Filtragem e Ordenação:
+ Modifique a consulta anterior para recuperar apenas colunas específicas e ordene os
+resultados.
+
+SELECT CustomerName, Address, Country FROM customers ORDER BY CustomerId ASC;
+
+ Faça uma consulta com junção de mais de uma coluna especifica para recuperar apenas
+dados específicos.
+
+SELECT
+  Customers.CustomerID,
+  Customers.CustomerName,
+  Orders.OrderID,
+  Orders.OrderDate
+FROM Customers
+INNER JOIN Orders
+ON Customers.CustomerID = Orders.CustomerID;
+
+Parte 2: API: https://fakerestapi.azurewebsites.net/index.html
+Objetivo do Teste: Realizar uma verificação abrangente da operação de seleção em uma API RESTful que gerencia
+recursos de [Books].
+Pré-condições:
+ O teste deve ser realizado na ferramenta POSTMAN (ou de sua preferência).
+ Evidenciar o retorno dos testes.
+1. Requisição GET: Listar Todos os Recursos
+ Enviar uma requisição GET para a rota que lista todos os recursos, verificar qual o código
+de status code.
+Status Code: 200 OK
+
+ Demonstrar um payload retornado noResponse body, para garantir que os dados estão
+sendo retornados conforme o esperado.
+https://fakerestapi.azurewebsites.net/api/v1/Authors/1
+{
+    "id": 1,
+    "idBook": 1,
+    "firstName": "First Name 1",
+    "lastName": "Last Name 1"
+}
+
+
+2. Requisição GET: Listar Recurso Específico (id)
+ Selecionar um recurso específico (existente na base de dados). Confirmar se os detalhes do
+recurso na resposta correspondem ao esperado.
+
+https://fakerestapi.azurewebsites.net/api/v1/Books/1
+
+{
+    "id": 1,
+    "title": "Book 1",
+    "description": "Lorem et sed justo sit et dolor dolor eu stet amet. Duo illum eros no ex erat ut sea diam elitr nonumy duo justo enim. Dolor sit et nulla invidunt rebum sea et erat placerat diam diam consetetur. At sea ipsum diam sea esse eu dolore veniam at erat accusam justo nisl nam ipsum. Amet dolor nobis tation accumsan clita sadipscing no tempor elitr clita et diam. At vel eirmod magna labore tempor elitr amet erat accusam kasd vel at nihil dolore amet magna. Diam amet lorem rebum exerci. Est augue sadipscing duo accusam duis duo invidunt. Rebum nam iusto aliquyam no esse et lorem nonumy duo nulla consequat lorem adipiscing magna voluptua. Vulputate ipsum aliquyam ipsum no nonummy accusam tempor. Nonumy sadipscing sed eos nobis laoreet in doming consequat diam vel magna kasd voluptua gubergren dolor. Rebum magna et amet erat erat at erat est clita ipsum accusam est aliquyam amet. Et volutpat eos no. Dolores no lorem sed ut invidunt sit facilisis elit eos.\n",
+    "pageCount": 100,
+    "excerpt": "In stet in gubergren sadipscing gubergren ea elit amet dolore invidunt doming tincidunt sed kasd id consetetur. Eros esse sadipscing zzril. Et stet est nostrud esse at dolore consetetur dolor. Justo minim et gubergren diam sed sea at. Diam takimata sanctus tempor lorem vero clita takimata velit ea ea velit sadipscing. Molestie duo nulla tempor diam diam ullamcorper sed ut nonumy sea ut adipiscing consetetur ut sit molestie duo et. Sadipscing placerat dolores tempor dolor velit consetetur dolor ipsum laoreet dolore. Dolor consequat aliquip at dolor ipsum vel aliquyam dolore gubergren ipsum dolores justo et takimata duo diam invidunt. Sit vero accumsan qui. Amet euismod invidunt sadipscing. Elitr magna feugait takimata gubergren kasd invidunt. Gubergren lorem labore eos invidunt sit consequat sit labore consequat duo. Diam kasd stet gubergren ut vero ut nulla feugait aliquam tempor dolores dolor consequat no.\nTe suscipit eos. Sanctus magna ea ipsum eos et eos est sed vulputate elitr dolores gubergren dolore adipiscing justo lorem est. At ullamcorper dolor est. Dolores facer esse gubergren labore. Ut diam sit kasd accusam. Dolor duis clita dolor clita eum erat invidunt amet vel in. Sed aliquyam ipsum eos esse dolor. Ipsum voluptua ipsum dolore aliquip labore adipiscing clita ut. Ea lorem illum. Et eirmod tempor mazim et stet stet ipsum invidunt facer lorem. Ea eu est sea.\nLorem id sit eos ipsum minim et qui lorem eos duo vero magna magna sea diam. Sed kasd aliquyam est labore odio aliquam. Nulla consequat cum dolor. Ea gubergren clita at. Diam tempor vero diam possim dolor lorem autem diam et clita. Labore diam vel dolor stet dolor lorem duo et eos feugiat amet dolor ea. Esse ea in eos vel sanctus gubergren. Sit ipsum dolor. Soluta tincidunt tempor vel amet sed ut volutpat nostrud velit ipsum ut minim nulla. In dolores suscipit consetetur justo tincidunt magna stet gubergren lorem aliquyam tempor. Sea et imperdiet. Clita eros dolor sadipscing sed voluptua amet ullamcorper. Ut lorem sit sit ut erat duo aliquyam aliquyam sit. No aliquip ea dolore vero ipsum elit et ullamcorper dolor. Ipsum sadipscing dolore sed invidunt dolore consectetuer veniam diam sanctus nam ea no accusam et ea at. Justo takimata justo et et. At voluptua odio dolores voluptua veniam sit sit takimata.\nLorem et et eum clita et sed gubergren sea magna amet takimata at. Tempor eos ipsum invidunt diam sed. No takimata clita gubergren justo et dolores ipsum gubergren. Voluptua volutpat consetetur clita sit sea voluptua. Et sed kasd id est elitr et diam diam labore molestie voluptua facer dolores dolore gubergren nonummy dolor est. Elitr sit veniam elit ipsum gubergren amet accusam dolor eu elitr ea diam. Lorem amet takimata amet amet et sed sadipscing at rebum kasd et et no in. Ex blandit lorem sadipscing dolore accumsan augue autem sit nonumy luptatum ipsum feugait takimata magna. Lorem ut justo kasd accusam ipsum id labore. Option at commodo vel magna et diam commodo dolor et dolor clita et enim. Tempor sea tempor elitr justo elitr dolor justo et. Duo amet nonumy eos amet ipsum vero aliquip wisi labore adipiscing labore erat ea sit rebum kasd at. Velit te ea accumsan kasd sit augue dolor. Amet dolores eos sanctus diam iriure dolor nonummy dolor eu sanctus stet duo at duo illum sed.\nEt dolor gubergren gubergren. Nonummy diam consectetuer ut. Nihil sed sit nulla et accumsan ut consequat sadipscing lorem dolor duo sea et.\n",
+    "publishDate": "2024-02-04T16:50:15.0172973+00:00"
+}
+
+ Simular uma requisição GET{id} invalida e relatar o status code retornado e demonstrar a
+rota (url) utilizada.
+
+https://fakerestapi.azurewebsites.net/api/v1/Authors/51000
+
+Status Code: 400
+
+3. Requisição POST:
+
+ Realizar um registro de uma ação de cadastro, utilizando de um payload como base das
+listas de retorno de recursos do GET.Verificar se a resposta possui um código de status
+code e informe o status code retornado.
+
+Status Code: 200
+
+{
+    "id": 201,
+    "title": "Book 201",
+    "description": "Book criado\n",
+    "pageCount": 1009,
+    "excerpt": "Book criado para teste.\n",
+    "publishDate": "2024-02-05T17:29:20.996Z"
+}
+
+
+ Simular um erro de registro utilizando de parâmetros inválidos ou de não preenchimento
+padrão de um valor de sua respectiva chave verificar o status code de retorno.
+
+Status Code: 400
+
+{
+    "id": 202,
+    "title": "Book 202",
+    "description": "Book criado"\n",
+    "pageCount": 1009,
+    "excerpt": "Book criado para teste.\n",
+    "publishDate": "2024-02-05T17:29:20.996Z"
+}
+
+Parte 3: Automação
+1. Cenário de Teste Automatizado: https://demo.automationtesting.in/Register.html
+ Crie um script de automação de teste utilizando uma ferramenta de automação como
+Selenium ou Cypress ou de sua preferência. O teste deve realizar o seguinte:
+ Acessar a página web.
+
+describe('FADESP', () => {
+  beforeEach(() => cy.visit('https://demo.automationtesting.in/Register.html'))
+})
+})
+
+ Preencher o formulário com dados fictícios.
+describe('Automação de Registro', () => {
+  it('Preencher formulário com dados fictícios', () => {
+    // Acessar a página de registro
+    cy.visit('https://demo.automationtesting.in/Register.html');
+
+    // Gerar dados fictícios
+    const nome = faker.name.findName();
+    const email = faker.internet.email();
+    const senha = faker.internet.password();
+    const genero = faker.random.arrayElement(['Masculino', 'Feminino']);
+    const telefone = faker.phone.phoneNumber();
+    const dataNascimento = faker.date.between('1980-01-01', '2000-12-31');
+    const hobby = faker.random.arrayElement(['Cricket', 'Movies', 'Music']);
+    const endereço = faker.address.streetAddress();
+    const cidade = faker.address.city();
+    const estado = faker.address.state();
+    const cep = faker.address.zipCode();
+
+    // Preencher os campos do formulário
+    cy.get('#FirstName').type(nome);
+    cy.get('#LastName').type(nome.split(' ')[1]);
+    cy.get('#Email').type(email);
+    cy.get('#Password').type(senha);
+    cy.get('#ConfirmPassword').type(senha);
+    cy.get(`input[type="radio"][value="${genero.toLowerCase()}"]`).check();
+    cy.get('#Phone').type(telefone);
+    cy.get('#DateOfBirth').type(dataNascimento);
+    cy.get(`#checkbox-${hobby.toLowerCase()}`).check();
+    cy.get('#Address').type(endereço);
+    cy.get('#City').type(cidade);
+    cy.get('#State').type(estado);
+    cy.get('#Zip').type(cep);
+
+    // Submeter o formulário
+    cy.get('#submitbtn').click();
+
+    // Validar o sucesso do registro
+    cy.get('.success').should('be.visible');
+  });
+});
+
+ Verificar se uma mensagem de sucesso é exibida.
+
+describe("Automação de Teste", () => {
+  beforeEach(() => {
+    cy.visit("https://demo.automationtesting.in/Register.html");
+  });
+
+  it("Verifica mensagem de sucesso no cadastro", () => {
+    
+    const firstNameInput = cy.get("#basicBootstrapForm input[name='firstName']");
+    const lastNameInput = cy.get("#basicBootstrapForm input[name='lastName']");
+    const emailInput = cy.get("#basicBootstrapForm input[name='email']");
+    
+
+    
+    firstNameInput.type("John");
+    lastNameInput.type("Doe");
+    emailInput.type("john.doe@example.com");
+    
+
+    
+    cy.get("#submitbtn").click();
+
+    
+    cy.get(".popup-header")
+      .should("contain.text", "Successfully Registered")
+      .should("be.visible");
+  });
+});
+
+
+Parte 4: Análise e Teste Manual
+1. Caso de Teste Manual: http://lojaebac.ebaconline.art.br/#
+ Desenvolva um caso de teste manual para verificar a funcionalidade da aplicação web.
+ Inclua passos específicos, entradas esperadas e critérios de sucesso.
+ Considere cenários de login bem-sucedido e falhado.
+ Suponha que tenha encontrado um defeito ou um ajuste durante seus testes
+manuais. Elabore um relatório de acordo com as seguintes seções:
+ Resumo do Defeito ou Ajuste.
+ Passos para Reproduzir.
+ Resultados Esperados.
+ Resultados Observados.
+ Anexar Print de tela, se possível.
+
+# Language: pt
+
+Funcionalidade: Análise e Teste Manual
+    Para verificar a funcionalidade da aplicação web
+    O usuário deseja realizar testes manuais
+
+Cenário: Login bem-sucedido
+    Dado que o usuário está na página inicial da aplicação
+    Quando o usuário insere "usuário" e "senha" válidos
+    E clica no botão "Entrar"
+    Então o usuário é redirecionado para a página principal da aplicação
+    E o usuário vê uma mensagem de boas-vindas
+
+Cenário: Login falhado
+    Dado que o usuário está na página inicial da aplicação
+    Quando o usuário insere "usuário" e/ou "senha" inválidos
+    E clica no botão "Entrar"
+    Então uma mensagem de erro é exibida ao usuário
+
+Cenário: Defeito ou ajuste encontrado durante os testes manuais
+    Dado que o usuário está na página inicial da aplicação
+    Quando o usuário realiza a ação específica que causa o defeito ou requer ajuste
+    Então o usuário observa o defeito ou a necessidade de ajuste
+    E o usuário tira um print de tela, se possível, para documentar o defeito ou o ajuste
+
+Notas sobre os casos de teste:
+- Os passos específicos, entradas esperadas e critérios de sucesso devem ser detalhados dentro de cada etapa do cenário.
+- Para o caso de login bem-sucedido, o critério de sucesso é ser redirecionado para a página principal da aplicação e ver uma mensagem de boas-vindas.
+- Para o caso de login falhado, o critério de sucesso é a exibição de uma mensagem de erro ao usuário.
+- O terceiro cenário descreve a situação em que um defeito ou ajuste é encontrado durante os testes manuais. O usuário deve documentar o defeito ou ajuste nos campos adequados do relatório, incluindo detalhes sobre os passos para reproduzir, resultados esperados e resultados observados.
